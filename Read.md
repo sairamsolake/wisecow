@@ -78,4 +78,17 @@ Optionally add KUBE_CONFIG secret (base64-encoded kubeconfig) if you want GitHub
 
 On each push to main, workflow will run automatically
 
+#Problem Statement 2
+1.open Directory /wisecow/problem-statement-2
+
+#Run Shell Script system_health_monitor.sh that will monitors the health of a Linux system using
+./system_health_monitor.sh
+
+<img width="981" height="251" alt="image" src="https://github.com/user-attachments/assets/b6bd3d14-1af4-4fa6-8629-58ac964d23af" />
+
+#Run A Shell Script To  Analyzes Web Server Logs
+./log_analyzer.sh ./logs/access.log 
+
+<img width="1326" height="269" alt="image" src="https://github.com/user-attachments/assets/b9b4f188-7dfa-47cb-96c3-5401c2c65331" />
+
  
