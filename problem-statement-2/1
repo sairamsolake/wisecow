@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# ----------------------------------------------
+# Application Uptime / Health Check Script
+# ----------------------------------------------
+# This script checks whether an application endpoint
+# is UP or DOWN based on HTTP status codes.
+# ----------------------------------------------
+
+# Ensure URL is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <application-url>"
+    exit 1
+fi
+
+URL="$1"
+
+# Make request and capture the HTTP status code
+STATUS_CODE=$(curl -o /dev/null -s -w "%{http_code}" "$URL")
+
+# Check Status
+if [[ "$STATUS_CODE" -ge 200 && "$STATUS_CODE" -le 299 ]]; then
+    echo "[✔] Application is UP — HTTP Status: $STATUS_CODE"
+elif [[ "$STATUS_CODE" -ge 300 && "$STATUS_CODE" -le 399 ]]; then
+    echo "[✔] Application is UP (Redirect) — HTTP Status: $STATUS_CODE"
+else
+    echo "[✘] Application is DOWN — HTTP Status: $STATUS_CODE"
+fi
+
