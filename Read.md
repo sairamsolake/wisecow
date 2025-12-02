@@ -91,4 +91,9 @@ On each push to main, workflow will run automatically
 
 <img width="1326" height="269" alt="image" src="https://github.com/user-attachments/assets/b9b4f188-7dfa-47cb-96c3-5401c2c65331" />
 
+#Run A Shell Script to Check Uptime of Application
+./app_uptime_check.sh http://local host:30443
+
+<img width="1153" height="125" alt="image" src="https://github.com/user-attachments/assets/396de60e-b7cc-46c0-889f-acdebaa64558" />
+
  
